@@ -1,13 +1,6 @@
-"use client";
-import Intor from "@/components/Headers_intro";
-import Skills from "@/components/skills";
-import Projects from "@/components/Projects";
-import { motion, useScroll, useTransform } from "framer-motion";
+const { scrollYProgress } = useScroll();
 
-export default function Home() {
-  const { scrollYProgress } = useScroll();
-
-  // Define animation ranges (0-1 scroll progress)
+  // Animation ranges (0-1 scale)
   const introRange = [0, 0.33];
   const skillsRange = [0.33, 0.66];
   const projectsRange = [0.66, 1];
@@ -22,6 +15,11 @@ export default function Home() {
     scrollYProgress,
     [introRange[0], introRange[1], skillsRange[0]],
     [1, 1, 0]
+  );
+  const introScale = useTransform(
+    scrollYProgress,
+    [introRange[0], introRange[1]],
+    [1, 0.95]
   );
 
   // Skills section effects
@@ -61,12 +59,13 @@ export default function Home() {
       <div className="h-[300vh] relative">
         {/* Sticky viewport container */}
         <div className="sticky top-0 h-screen w-full overflow-hidden">
-          {/* Intro section */}
+          {/* Intro section - highest z-index when active */}
           <motion.div
             className="absolute top-0 left-0 w-full h-full"
             style={{
               y: introY,
               opacity: introOpacity,
+              scale: introScale,
               zIndex: useTransform(scrollYProgress, (val) =>
                 val < skillsRange[0] ? 30 : 10
               ),
@@ -75,7 +74,7 @@ export default function Home() {
             <Intor />
           </motion.div>
 
-          {/* Skills section */}
+          {/* Skills section - middle z-index */}
           <motion.div
             className="absolute top-0 left-0 w-full h-full"
             style={{
@@ -89,7 +88,7 @@ export default function Home() {
             <Skills />
           </motion.div>
 
-          {/* Projects section */}
+          {/* Projects section - lowest z-index when active */}
           <motion.div
             className="absolute top-0 left-0 w-full h-full"
             style={{
@@ -105,7 +104,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Scroll progress indicator (optional) */}
+      {/* Scroll progress indicator */}
       <motion.div
         className="fixed bottom-4 left-4 h-1 bg-white rounded-full z-50"
         style={{
@@ -113,5 +112,3 @@ export default function Home() {
         }}
       />
     </motion.main>
-  );
-}
