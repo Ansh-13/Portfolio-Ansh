@@ -26,7 +26,7 @@ export default function Header() {
   const rotateXRight = useTransform(yRight, [0, 1], [15, -15]);
   const rotateYRight = useTransform(xRight, [0, 1], [-15, 15]);
 
-  const handleMouseMove_right = (e) => {
+  const handleMouseMove_right = (e: any) => {
     if (!cardRef_right.current) return;
     const rect = cardRef_right.current.getBoundingClientRect();
     const posX = (e.clientX - rect.left) / rect.width;
@@ -36,7 +36,7 @@ export default function Header() {
     yRight.set(posY);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: any) => {
     if (!cardRef_left.current) return;
     const rect = cardRef_left.current.getBoundingClientRect();
     const posX = (e.clientX - rect.left) / rect.width;
