@@ -47,7 +47,8 @@ const colors = ["#0cdcf7", "#d375c6"];
 export default function Projects() {
   const [selectedItem, setSelectedItem] = useState(items[0]);
   const [direction, setDirection] = useState<1 | -1>(1);
-  const [dialogOpen, setDialogOpen] = useState(false);
+  //const [dialogOpen, setDialogOpen] = useState(false);
+  let setDialogOpen = false;
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -66,7 +67,7 @@ export default function Projects() {
       ((selectedItem - 1 + newDirection + items.length) % items.length) + 1;
     setSelectedItem(nextItem);
     setDirection(newDirection);
-    setDialogOpen(false);
+    setDialogOpen = false;
   };
 
   const color = colors[selectedItem - 1];
@@ -222,7 +223,7 @@ export default function Projects() {
                             </span>
                           </motion.button>
                         }
-                        onOpenChange={(isOpen) => setDialogOpen(isOpen)}
+                        onOpenChange={(isOpen) => (setDialogOpen = isOpen)}
                       >
                         <div className="p-4 sm:p-6 max-w-[90vw] sm:max-w-md md:max-w-lg w-full">
                           <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">

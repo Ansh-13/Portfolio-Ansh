@@ -3,10 +3,11 @@ import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 interface Props {
-  letters: String[];
+  letters: string[];
+  className?: string;
 }
 
-export default function CursorText(props: any) {
+export default function CursorText(props: Props) {
   const letters = props.letters;
 
   const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
@@ -53,7 +54,7 @@ export default function CursorText(props: any) {
     <>
       <span className="text-6xl font-bold text-center z-10 text-white m-0">
         <div className="p-0 m-0 inline-flex items-center justify-center relative">
-          {letters.map((letter: String, i: any) => (
+          {letters.map((letter: string, i: number) => (
             <motion.span
               key={i}
               ref={(el) => {
