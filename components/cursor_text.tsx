@@ -2,6 +2,10 @@ import { animate } from "framer-motion";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+interface Props {
+  letters: String[];
+}
+
 export default function CursorText(props: any) {
   const letters = props.letters;
 
@@ -52,7 +56,9 @@ export default function CursorText(props: any) {
           {letters.map((letter: String, i: any) => (
             <motion.span
               key={i}
-              ref={(el) => (letterRefs.current[i] = el)}
+              ref={(el) => {
+                letterRefs.current[i] = el;
+              }}
               initial={{ opacity: 0 }}
               animate={{ opacity: i < visibleCount ? 1 : 0 }}
               transition={{ duration: 0.3 }}

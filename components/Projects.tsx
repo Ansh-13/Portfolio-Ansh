@@ -37,6 +37,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/user/task-manager",
     Technology: "React, Node.js, MongoDB",
     Learning: "Full-stack development, REST APIs, Database management",
+    image_link: "",
   },
 ];
 
@@ -155,7 +156,7 @@ export default function Projects() {
                     <div className="relative aspect-video w-full overflow-hidden rounded-md mb-4">
                       <img
                         alt={currentProject.name}
-                        src={currentProject.img_link}
+                        src={currentProject.image_link}
                         className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${
                           isHovered ? "scale-105" : "scale-100"
                         }`}
