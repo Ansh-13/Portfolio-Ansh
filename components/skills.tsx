@@ -18,7 +18,7 @@ const transition_ = {
   duration: 6,
   repeat: Infinity,
   ease: "easeInOut",
-  repeatType: "mirror",
+  repeatType: "mirror" as const,
 };
 
 const box: React.CSSProperties = {
@@ -49,7 +49,7 @@ export default function Skills() {
 
   const backgroundImage = useMotionTemplate`radial-gradient(100% 100% at 50% 0%, black 70%, ${color})`;
 
-  const initialOrder = [
+  const initialOrder: [string, string][] = [
     ["#ff0088", "Python"],
     ["#dd00ee", "Javascript"],
     ["#9911ff", "Reactjs"],

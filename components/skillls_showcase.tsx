@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ShowCase(props: any) {
+interface Props {
+  initialOrder: Array<[string, string]>;
+}
+
+export default function ShowCase(props: Props) {
   const [order, setOrder] = useState(props.initialOrder);
   const [isMobile, setIsMobile] = useState(false);
 
