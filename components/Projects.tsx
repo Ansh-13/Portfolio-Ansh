@@ -208,40 +208,6 @@ export default function Projects() {
                       )}
                     </div>
 
-                    {/* <AnimatedDialog
-                      trigger={
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="px-3 py-1 md:px-4 md:py-2 rounded-lg self-end"
-                          style={{ backgroundColor: color }}
-                        >
-                          <span className="text-xs md:text-sm">
-                            View Details
-                          </span>
-                        </motion.button>
-                      }
-                      open={dialogOpen}
-                      onOpenChange={setDialogOpen}
-                    >
-                      <div className="p-4 md:p-6">
-                        <h2 className="text-xl md:text-2xl font-bold">
-                          {currentProject.name}
-                        </h2>
-                        <p className="mt-2 text-sm md:text-base">
-                          {currentProject.description}
-                        </p>
-                        <a
-                          href={currentProject.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-4 inline-flex items-center text-blue-500 hover:underline text-sm md:text-base"
-                        >
-                          <Github className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-                          View on GitHub
-                        </a>
-                      </div>
-                    </AnimatedDialog> */}
                     {!isMobile && (
                       <AnimatedDialog
                         trigger={
@@ -256,8 +222,7 @@ export default function Projects() {
                             </span>
                           </motion.button>
                         }
-                        open={dialogOpen}
-                        onOpenChange={setDialogOpen}
+                        onOpenChange={(isOpen) => setDialogOpen(isOpen)}
                       >
                         <div className="p-4 sm:p-6 max-w-[90vw] sm:max-w-md md:max-w-lg w-full">
                           <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">

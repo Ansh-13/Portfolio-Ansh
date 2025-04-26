@@ -16,6 +16,7 @@ export function AnimatedDialog({
   trigger: ReactNode;
   children: ReactNode;
   className?: string;
+  onOpenChange?: (isOpen: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
 
