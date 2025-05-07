@@ -29,6 +29,17 @@ export async function POST(request: Request) {
     }),
   });
 
+  if (data) {
+    console.log("Email sent successfully:", data);
+  }
+
+  if (error) {
+    return Response.json({
+      success: false,
+      message: "Failed to send email",
+    });
+  }
+
   return Response.json({
     success: true,
     message: "Form submitted successfully",

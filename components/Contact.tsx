@@ -37,7 +37,9 @@ export default function Contact() {
         setStatus(`Error: ${data.error}`);
       }
     } catch (error) {
-      setStatus("Error sending message. Please try again.");
+      setStatus(
+        "Error sending message. Please try again later. error: " + error
+      );
     } finally {
       setIsSubmitting(false);
     }
