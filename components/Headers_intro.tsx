@@ -6,7 +6,7 @@ import Drag from "./follow_pointer";
 export default function Intro() {
   const headingText = "Software Engineer";
   const description =
-    "I'm a passionate software engineer who enjoys turning complex problems into clean, efficient, and user-friendly solutions. I love working with modern tech like React, Next.js, and ML tools to build scalable, performant applications.";
+    "Welcome to my portfolio! I'm Ansh Garg, a senior-year B.Tech student in Electronics and Instrumentation with a Computer Science minor at Nirma University. Driven by curiosity and creativity, I aspire to be a software engineer who transforms complex challenges into innovative, real-world tech solutions.";
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center gap-8 p-6 sm:p-8 bg-black text-white relative overflow-x-hidden text-center">
@@ -118,7 +118,7 @@ export default function Intro() {
           <Github size={24} className="sm:size-7" />
         </motion.a>
         <motion.a
-          href="https://linkedin.com/"
+          href="https://www.linkedin.com/in/ansh-garg-319602255/"
           target="_blank"
           whileHover={{ scale: 1.2, color: "#ff0088" }}
           transition={{ type: "spring", stiffness: 300 }}

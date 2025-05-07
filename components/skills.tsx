@@ -58,6 +58,7 @@ export default function Skills() {
     ["#f9598e", "OS"],
     ["#0d63f8", "ML"],
     ["#9911ff", "web sockets"],
+    ["#ff9683", "Tailwind CSS"],
     ["#0d63f8", "MongoDB"],
   ];
 

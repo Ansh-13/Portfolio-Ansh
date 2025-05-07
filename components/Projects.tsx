@@ -24,25 +24,70 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React and Node.js",
-    githubLink: "https://github.com/user/ecommerce-platform",
-    Technology: "React, Node.js, MongoDB",
-    Learning: "Full-stack development, REST APIs, Database management",
+    name: "Remake",
+    description: `
+    ● This is a shortvideoweb-app build on Nextjs in which user can upload video as well as watch other people content.
+    ● For all the video handling part I use Imagekit and for user authentication I use Next Auth.
+    ● From this I learned the key concept of Nextjs, NextAuth and Imagekit.
+  `,
+    githubLink: "https://github.com/Ansh-13/Remake/tree/main",
+    Technology: "MongoDB,Imagekit, Nextjs",
+    Learning: "Mongo DB, Imagekit, Nextjs",
     image_link: "",
   },
   {
-    name: "Task Management App",
-    description: "A productivity app built with TypeScript and Firebase",
-    githubLink: "https://github.com/user/task-manager",
-    Technology: "React, Node.js, MongoDB",
-    Learning: "Full-stack development, REST APIs, Database management",
+    name: "Broadcasting Channel",
+    description: `
+    ● InQuizAppusercangiveanswer to different question and get their score at end.
+    ● Keylearning while building this web app is api integration, retrieving data from api.
+    `,
+    githubLink: "https://github.com/Ansh-13/broadcasting-channel",
+    Technology: "React, MongoDB, User Authentication",
+    Learning:
+      "Concept of React, Web Sockets, User Authentication features like login, sign up, signout",
     image_link: "",
+  },
+  {
+    name: "Quiz-App",
+    description: `
+    ● InQuizAppusercangiveanswer to different question and get their score at end.
+    ● Keylearning while building this web app is api integration, retrieving data from api.
+    `,
+    githubLink: "https://github.com/Ansh-13/testline/tree/main",
+    Technology: "Nextjs, Fetching data from fetching",
+    Learning:
+      "Concept of Nextjs, how to fetch data from api in nextjs and use that data in nextjs app",
+    image_link: "",
+  },
+  {
+    name: "Bash Shell",
+    description: `
+    In this I create the basic command of shell script in c++ like cd, pwd, mkdir, echo, ls and many more.`,
+    githubLink: "https://github.com/Ansh-13/bash-shell",
+    Technology: "concept of c++, commands of bash",
+    Learning:
+      "Concept of Nextjs, how to fetch data from api in nextjs and use that data in nextjs app",
+    image_link: "OIP.jpg",
+  },
+  {
+    name: "Hepatic steatosis detection",
+    description: `
+    ● Usingultrasound Image to classify the fatty liver into categories. By augmenting the dataset to
+    increase the number of image for each stage.
+    ● Extraction feature from this ultrasound images and give these extracted feature to the Local
+    Binary pattern then normalize the data.
+    ● Trainthedifferent models like Random Forest Classifier, Support Vector Machine and Artificial
+    Neural Network.
+    `,
+    githubLink: "",
+    Technology: "Python, Numpy, sklearn",
+    Learning: "Concept of Python, Numpy, function in sklearn",
+    image_link: "/fatty_liver.jpg",
   },
 ];
 
-const items = [1, 2];
-const colors = ["#0cdcf7", "#d375c6"];
+const items = [1, 2, 3, 4, 5];
+const colors = ["#0cdcf7", "#d375c6", "#0cdcf7", "#d375c6", "#0cdcf7"];
 
 export default function Projects() {
   const [selectedItem, setSelectedItem] = useState(items[0]);
@@ -52,6 +97,7 @@ export default function Projects() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    `1 890-*`;
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -192,6 +238,14 @@ export default function Projects() {
                           <Presentation className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                           <span className="text-sm md:text-base">
                             {currentProject.Learning}
+                          </span>
+                        </div>
+                      )}
+                      {currentProject.description && (
+                        <div className="flex items-center mb-4 text-gray-700 dark:text-gray-400">
+                          {/* <Presentation className="mr-2 h-4 w-4 md:h-5 md:w-5" /> */}
+                          <span className="text-sm md:text-base">
+                            {currentProject.description}
                           </span>
                         </div>
                       )}
