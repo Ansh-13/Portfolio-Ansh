@@ -97,7 +97,7 @@ export default function Projects() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    `1 890-*`;
+    // `1 890-*`;
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
