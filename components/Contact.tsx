@@ -16,7 +16,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/.netlify/functions/submitform", {
+      const response = await fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
