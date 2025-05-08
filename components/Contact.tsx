@@ -16,25 +16,21 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("https://formspree.io/f/xnndvlpl", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          senderEmail,
-          message,
+          senderEmail: senderEmail,
+          message: message,
         }),
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (data) {
         setStatus("Message sent successfully!");
         setSenderEmail("");
         setMessage("");
-      } else {
-        setStatus(`Error: ${data.error}`);
       }
     } catch (error) {
       setStatus(

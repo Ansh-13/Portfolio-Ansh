@@ -19,6 +19,9 @@ export async function POST(request: Request) {
   //   `,
   // });
 
+  console.log("Sender Email:", senderEmail);
+  console.log("Message:", message);
+
   const { data, error } = await resend.emails.send({
     from: "Acme <onboarding@resend.dev>",
     to: "anshgarg7234@gmail.com",
