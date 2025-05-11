@@ -73,6 +73,17 @@ export default function Home() {
 
   return (
     <motion.main className="relative" style={{ backgroundColor: bgColor }}>
+      <motion.div
+        className="absolute text-[#ff0088] z-10 text-2xl font-extrabold m-8 font-serif"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{
+          scale: 1.2,
+        }}
+      >
+        <nav className="">Circle</nav>
+      </motion.div>
+
       {/* Scrollable content container */}
       <div className="h-[400vh] relative">
         {/* Sticky viewport container */}

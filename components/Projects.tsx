@@ -33,7 +33,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/Ansh-13/Remake/tree/main",
     Technology: "MongoDB,Imagekit, Nextjs",
     Learning: "Mongo DB, Imagekit, Nextjs",
-    image_link: "",
+    image_link: "Reamke.png",
   },
   {
     name: "Broadcasting Channel",
@@ -45,7 +45,7 @@ const projects: Project[] = [
     Technology: "React, MongoDB, User Authentication",
     Learning:
       "Concept of React, Web Sockets, User Authentication features like login, sign up, signout",
-    image_link: "",
+    image_link: "broadcasting_channel.png",
   },
   {
     name: "Quiz-App",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     Technology: "Nextjs, Fetching data from fetching",
     Learning:
       "Concept of Nextjs, how to fetch data from api in nextjs and use that data in nextjs app",
-    image_link: "",
+    image_link: "QuizApp.png",
   },
   {
     name: "Bash Shell",
