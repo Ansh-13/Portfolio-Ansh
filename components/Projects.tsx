@@ -33,7 +33,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/Ansh-13/Remake/tree/main",
     Technology: "MongoDB,Imagekit, Nextjs",
     Learning: "Mongo DB, Imagekit, Nextjs",
-    image_link: "Reamke.png",
+    image_link: "Remake.png",
   },
   {
     name: "Broadcasting Channel",

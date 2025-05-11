@@ -4,6 +4,7 @@ import Skills from "@/components/skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Circle } from "lucide-react";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -74,14 +75,17 @@ export default function Home() {
   return (
     <motion.main className="relative" style={{ backgroundColor: bgColor }}>
       <motion.div
-        className="absolute text-[#ff0088] z-10 text-2xl font-extrabold m-8 font-serif"
+        className="absolute z-10 text-pink-500 text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold m-4 sm:m-6 md:m-8 font-serif flex justify-center items-center gap-2"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        whileHover={{
-          scale: 1.2,
-        }}
+        whileHover={{ scale: 1.2 }}
       >
-        <nav className="">Circle</nav>
+        <div className="flex items-center gap-2">
+          <Circle />
+          <motion.span whileHover={{ textDecoration: "underline" }}>
+            Circle
+          </motion.span>
+        </div>
       </motion.div>
 
       {/* Scrollable content container */}
